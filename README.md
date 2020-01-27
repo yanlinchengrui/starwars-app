@@ -14,3 +14,8 @@
 - Currently, it does not support direct access to specific urls such as 'http://localhost:3000/people/2/' because these pages only display the data which is passed by the film component and they don't request data from the APIs by itself. Therefore, it could be improved by checking if any data is passed to this component. If there is no passed data, send a get request based on the url and retrive the data so that it could show on the page. 
 
 - Everytime I click to go back to the film detail page or the film list page, the page needs to reload and retrieve the data from the API again. Therefore, I think the app could be improved by restoring the previous page state but currently I am still trying to figure out how to do it.
+
+## Screenshots
+!["MainPage"](https://github.com/yanlinchengrui/burger_builder/blob/master/docs/main.png)
+!["FilmDetail"](https://github.com/yanlinchengrui/burger_builder/blob/master/docs/filmDetail.png)
+!["CharacterDetail"](https://github.com/yanlinchengrui/burger_builder/blob/master/docs/characterDetail.png)
