@@ -7,14 +7,14 @@ const species = (props) => {
     <>
       <h3> {name} </h3>
       <ul>
-        <li>Classification: {classification} </li>
-        <li>Designation: {designation} </li>
-        <li>Average Height: {average_height} </li>
-        <li>Skin Colors: {skin_colors} </li>
-        <li>Hair Colors: {hair_colors} </li>
-        <li>Eye Colors: {eye_colors} </li>
-        <li>Language: {language} </li>
-        <li>Average Lifespan: {average_lifespan} </li>
+        <li> Classification: {classification} </li>
+        <li> Designation: {designation} </li>
+        <li> Average Height: {average_height} </li>
+        <li> Skin Colors: {skin_colors} </li>
+        <li> Hair Colors: {hair_colors} </li>
+        <li> Eye Colors: {eye_colors} </li>
+        <li> Language: {language} </li>
+        <li> Average Lifespan: {average_lifespan} </li>
       </ul>
       <GoBackButton history={props.history} />
     </>
