@@ -1,10 +1,10 @@
 import React from 'react';
+import GoBackButton from '../GoBackButton';
 
 const species = (props) => {
-
   const { name, classification, designation, average_height, skin_colors, hair_colors, eye_colors, language, average_lifespan } = props.location.state.species;
   return (
-    <React.Fragment>
+    <>
       <h3> {name} </h3>
       <ul>
         <li>Classification: {classification} </li>
@@ -16,9 +16,9 @@ const species = (props) => {
         <li>Language: {language} </li>
         <li>Average Lifespan: {average_lifespan} </li>
       </ul>
-    </React.Fragment>
+      <GoBackButton history={props.history} />
+    </>
   );
-
 }
 
 export default species;

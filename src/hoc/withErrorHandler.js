@@ -8,42 +8,37 @@ const withErrorHandler = (WrappedComponent, axios) => {
       error: null
     }
 
-    componentWillMount() {
-      this.reqInterceptor = axios.interceptors.request.use(req => {
+    UNSAFE_componentWillMount() {
+      // Add a request interceptor
+      this.requestInterceptor = axios.interceptors.request.use(req => {
         this.setState({ error: null });
         return req;
       });
+      // Add a response interceptor
       this.resInterceptor = axios.interceptors.response.use(res => res, error => {
+        // Any status codes that falls outside the range of 2xx cause this function to trigger
         this.setState({ error: error });
       });
     }
 
     componentWillUnmount() {
+      // remove two interceptors before this component is unmounted and destroyed
       axios.interceptors.request.eject(this.reqInterceptor);
       axios.interceptors.request.eject(this.resInterceptor);
     }
 
-    clearError = () => {
-      this.setState({ error: null });
-    }
-
     render() {
-
-      if (this.state.error) {
-        return (
-          <Message
-            onDismiss={this.clearError}
+      return (
+        <>
+          {this.state.error && <Message
             header='Oops something is wrong :('
             content={this.state.error.message}
-          />
-        );
-      }
-      return (
-        <WrappedComponent {...this.props} />
+          />}
+          <WrappedComponent {...this.props} />
+        </>
       );
     }
   }
 }
-
 
 export default withErrorHandler;

@@ -1,10 +1,10 @@
 import React from 'react';
+import GoBackButton from '../GoBackButton';
 
 const planet = (props) => {
-
-  const { name, rotation_period, diameter, climate, gravity, terrain, surface_water, population, orbital_period } = props.location.state.planet;
+  const { name, rotation_period, diameter, climate, gravity, terrain, surface_water, population, orbital_period } = props.location.state.planets;
   return (
-    <React.Fragment>
+    <>
       <h3> {name} </h3>
       <ul>
         <li> Rotation Period: {rotation_period} </li>
@@ -16,9 +16,9 @@ const planet = (props) => {
         <li> Surface Water: {surface_water} </li>
         <li> Population: {population} </li>
       </ul>
-    </React.Fragment>
+      <GoBackButton history={props.history} />
+    </>
   );
-
 }
 
 export default planet;

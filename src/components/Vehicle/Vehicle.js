@@ -1,10 +1,10 @@
 import React from 'react';
+import GoBackButton from '../GoBackButton';
 
-const starship = (props) => {
-
-  const { name, model, manufacturer, cost_in_credits, length, max_atmosphering_speed, crew, passengers, cargo_capacity, consumables, hyperdrive_rating, MGLT, starship_class, pilots } = props.location.state.starships;
+const vehicle = (props) => {
+  const { name, model, manufacturer, cost_in_credits, length, max_atmosphering_speed, crew, passengers, cargo_capacity, consumables, vehicle_class } = props.location.state.vehicles;
   return (
-    <React.Fragment>
+    <>
       <h3> {name} </h3>
       <ul>
         <li> Model: {model} </li>
@@ -16,14 +16,11 @@ const starship = (props) => {
         <li> Passengers: {passengers} </li>
         <li> Cargo_capacity: {cargo_capacity} </li>
         <li> Consumables: {consumables} </li>
-        <li> Hyperdrive Rating: {hyperdrive_rating} </li>
-        <li> MGLT: {MGLT} </li>
-        <li> Starship Class: {starship_class} </li>
-        {/* <li> Pilots: {pilots} </li> */}
+        <li> Vehicle Class: {vehicle_class} </li>
       </ul>
-    </React.Fragment>
+      <GoBackButton history={props.history} />
+    </>
   );
-
 }
 
-export default starship;
+export default vehicle;
