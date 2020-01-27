@@ -16,6 +16,6 @@
 - Everytime I click to go back to the film detail page or the film list page, the page needs to reload and retrieve the data from the API again. Therefore, I think the app could be improved by restoring the previous page state but currently I am still trying to figure out how to do it.
 
 ## Screenshots
-!["MainPage"](https://github.com/yanlinchengrui/burger_builder/blob/master/docs/main.png)
-!["FilmDetail"](https://github.com/yanlinchengrui/burger_builder/blob/master/docs/filmDetail.png)
-!["CharacterDetail"](https://github.com/yanlinchengrui/burger_builder/blob/master/docs/characterDetail.png)
+!["MainPage"](https://github.com/yanlinchengrui/starwars-app/blob/master/docs/main.png)
+!["FilmDetail"](https://github.com/yanlinchengrui/starwars-app/blob/master/docs/filmDetail.png)
+!["CharacterDetail"](https://github.com/yanlinchengrui/starwars-app/blob/master/docs/characterDetail.png)
