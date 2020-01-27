@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Message } from 'semantic-ui-react'
 
+// the folder hoc stands for high order component
 const withErrorHandler = (WrappedComponent, axios) => {
   return class extends Component {
 
